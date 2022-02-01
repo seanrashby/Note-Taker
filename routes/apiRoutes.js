@@ -27,7 +27,7 @@ module.exports = function(app) {
 };
 
 function init() {
-     fs.readFile("./db/notes.json", "utf8", function (err, data) {
+     fs.readFile("./db/db.json", "utf8", function (err, data) {
           if (err) {
                throw err;
           }
@@ -41,7 +41,7 @@ function init() {
 
 function writeToJsonFile(notes) {
      let notesJSON = JSON.stringify(notes, null, 2);
-     fs.writeFile("./db/notes.json", notesJSON, function (err) {
+     fs.writeFile("./db/db.json", notesJSON, function (err) {
           if (err) {
                throw err;
           }
