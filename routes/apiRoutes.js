@@ -27,7 +27,7 @@ module.exports = function(app) {
 };
 
 function init() {
-     fs.readFile("./db/db.json", "utf8", function (err, data) {
+     fs.readFile("./db/db.json", "utf-8", function (err, data) {
           if (err) {
                throw err;
           }
